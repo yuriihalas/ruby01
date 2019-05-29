@@ -4,7 +4,7 @@ load 'elevator.rb'
 
 class Application
   attr_accessor :elevator
-  COUNT = 6
+  COUNT_PERSONS = 6
   WEIGHT_PERSON = 60
 
   def initialize
@@ -17,7 +17,7 @@ class Application
     count_persons = 2
 
     while elevator.run WEIGHT_PERSON
-      if count_persons <= COUNT
+      if count_persons <= COUNT_PERSONS
         add_person
         count_persons += 1
       end
