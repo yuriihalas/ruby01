@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-load 'doors.rb'
+load 'common_doors_helper.rb'
 load 'control_panel.rb'
 
 class Elevator
@@ -7,7 +7,7 @@ class Elevator
   ENGINE_STRONG = 2
   ENGINE = 1
 
-  include Doors
+  include CommonDoorsHelper
 
   attr_accessor :total_weight, :speed, :engine, :control_panel
 

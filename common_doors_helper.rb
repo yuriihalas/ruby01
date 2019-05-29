@@ -1,4 +1,4 @@
-module Doors
+module CommonDoorsHelper
   def close_door
     puts 'Door close..'
   end
