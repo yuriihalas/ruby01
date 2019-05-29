@@ -1,7 +1,10 @@
-# frozen_string_literal: true
-
-module ControlPanel
+class ControlPanel
   attr_accessor :current_floor, :definition
+
+  def initialize
+    self.definition = []
+    self.current_floor = 1
+  end
 
   def call_help
     puts 'Function is not defined'
@@ -11,19 +14,9 @@ module ControlPanel
     self.definition.push(definition)
   end
 
-  def close_door
-    puts 'Door close..'
-  end
-
-  def open_door
-    puts 'Door open..'
-  end
-
   def print_info
     puts "Definition: #{definition}\nNow current floor: #{current_floor}\n "
   end
-
-  private
 
   def remove_definitions
     size_definition_before = definition.size

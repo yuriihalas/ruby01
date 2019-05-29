@@ -4,11 +4,11 @@ load 'elevator.rb'
 
 class Application
   attr_accessor :elevator
-  COUNT = 10
+  COUNT = 6
   WEIGHT_PERSON = 60
 
   def initialize
-    @elevator = Elevator.new
+    self.elevator = Elevator.new
   end
 
   def run
